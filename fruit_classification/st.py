@@ -39,8 +39,8 @@ while 1:
         f.close()
         print('Success')
         path = "/home/heisenberg/桌面/image_classification/test/test.jpg"
-        result = rmc.fruit_c(path)
-        client.send(result.encode("utf8"))
+        result = rmc.fruit_c(path)  #调用识别函数
+        client.send(result.encode("utf8"))  #发送结果到客户端
         if os.path.exists(path):
     #删除文件
             os.remove(path)
